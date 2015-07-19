@@ -1,4 +1,4 @@
-FROM shippableimages/ubuntu1404_base
+FROM shippableimages/ubuntu1404_base:latest
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
     echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-3.0.list && \
@@ -17,6 +17,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
 
 	echo "deb http://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list.d/sbt.list && \
 	apt-get update && \
-	apt-get install -y --force-yes sbt
+	apt-get install -y --force-yes sbt && \
+	apt-get install -y maven
 
 CMD ["/bin/bash"]
