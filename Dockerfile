@@ -3,7 +3,7 @@ FROM shippableimages/ubuntu1404_base:latest
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
 	echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-3.0.list && \
 	apt-get update && \
-	apt-get install -y --force-yes mongodb-org=3.0.2 mongodb-org-server=3.0.2 mongodb-org-shell=3.0.2 mongodb-org-mongos=3.0.2 mongodb-org-tools=3.0.2 && \
+	apt-get install -y --force-yes mongodb-org=3.0.5 mongodb-org-server=3.0.5 mongodb-org-shell=3.0.5 mongodb-org-mongos=3.0.5 mongodb-org-tools=3.0.5 && \
 	echo "mongodb-org hold" | sudo dpkg --set-selections && \
 	echo "mongodb-org-server hold" | sudo dpkg --set-selections && \
 	echo "mongodb-org-shell hold" | sudo dpkg --set-selections && \
