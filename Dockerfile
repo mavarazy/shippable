@@ -18,8 +18,8 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
 	apt-get update && \
 	apt-get install -y oracle-java8-installer && \
 
-	wget www.scala-lang.org/files/archive/scala-2.11.6.deb && \
-	dpkg -i scala-2.11.6.deb && \
+	wget www.scala-lang.org/files/archive/scala-2.11.7.deb && \
+	dpkg -i scala-2.11.7.deb && \
 
 	echo "deb http://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list.d/sbt.list && \
 	apt-get update && \
